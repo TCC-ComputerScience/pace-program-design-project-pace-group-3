@@ -4,7 +4,8 @@
   Last Modified: 4/24/21
   */
 
-  #include <iostream>
+  #include <iostream> /*cout*/
+  #include <stdlib.h> /*srand, rand*/
 
   using namespace std;
 
@@ -14,20 +15,20 @@
 
   //Initializes board with values
   //Pre: None
-  //Post: board is filled with car values
+  //Post: board is filled with char values
   void InitBoard(GameBoard& board);
 
   //Places a ship into the gameBoard array in a randomized location based on ship type
-  //Pre: none
+  //Pre: None
   //Post: A ship is placed onto board in a randomized, valid location
   void PlaceShip(Ships shipType, GameBoard& board);
 
   //Lets the user play Battleship through a menu system
-  //Pre: gameBoard has been declared and has values associated with each member
+  //Pre: gameBoard has been declared and has values associated with each member. 5 ships have been placed into board in valid locations
   //Post: The user plays Battleship until they win the game or forfeit
   void PlayGame(GameBoard& board);
 
-  //Prints the gameBoard variable to the console
+  //Prints the game board to the console, with ship locations revealed if printShipLocations is true
   //Pre: The board passed in is defined and has values associated with each member
   //Post: The board is printed to the console
   void PrintBoard(GameBoard board, bool printShipLocations);
